@@ -13,6 +13,7 @@ public class ContainerConfig {
     public MySQLContainer<?> mySQLContainer() {
         return new MySQLContainer<>("mysql:8.0.28-oracle")
             .withUsername("root")
-            .withPassword("1234");
+            .withPassword("1234")
+            .withInitScript("sql/init.sql");
     }
 }
